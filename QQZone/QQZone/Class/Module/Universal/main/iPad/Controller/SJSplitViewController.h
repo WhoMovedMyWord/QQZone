@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SJSplitViewController : UISplitViewController
+/**
+ *  设置spliteVC的屏幕的宽度
+ *
+ *  @param orientation <#orientation description#>
+ */
+- (void)setupPrimaryColumnWidthWithOrientation:(UIInterfaceOrientation)orientation;
 
 @end

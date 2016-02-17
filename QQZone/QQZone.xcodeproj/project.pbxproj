@@ -14,6 +14,7 @@
 		DFF8DC331C734C7400DE2E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC311C734C7400DE2E2F /* LaunchScreen.storyboard */; };
 		DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC501C744D1800DE2E2F /* SJMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFF8DC4C1C7417BC00DE2E2F /* SJSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSplitViewController.h; sourceTree = "<group>"; };
 		DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSplitViewController.m; sourceTree = "<group>"; };
+		DFF8DC4F1C744D1800DE2E2F /* SJMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMenuViewController.h; sourceTree = "<group>"; };
+		DFF8DC501C744D1800DE2E2F /* SJMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 			children = (
 				DFF8DC4C1C7417BC00DE2E2F /* SJSplitViewController.h */,
 				DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */,
+				DFF8DC4F1C744D1800DE2E2F /* SJMenuViewController.h */,
+				DFF8DC501C744D1800DE2E2F /* SJMenuViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			files = (
 				DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */,
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
+				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
 				DFF8DC251C734C7400DE2E2F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

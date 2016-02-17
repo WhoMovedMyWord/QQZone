@@ -99,10 +99,10 @@
         <!--Split View Controller-->
         <scene sceneID="zJV-fW-vU2">
             <objects>
-                <splitViewController id="NOf-9U-J3f" sceneMemberID="viewController">
+                <splitViewController id="NOf-9U-J3f" customClass="SJSplitViewController" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Ppc-lD-8TU" kind="relationship" relationship="detailViewController" id="8Y1-4D-uay"/>
-                        <segue destination="NSp-0Z-lgy" kind="relationship" relationship="masterViewController" id="axM-qk-5F4"/>
+                        <segue destination="NSp-0Z-lgy" kind="relationship" relationship="masterViewController" id="5ai-tU-ehL"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbb-WS-Lbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
