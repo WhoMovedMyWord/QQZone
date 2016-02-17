@@ -15,6 +15,17 @@
 
 @implementation SJSplitViewController
 
+//spliteVC的初始化方法
+- (instancetype)init{
+    if (self = [super init]) {
+        SJMenuViewController *menuVC = [[SJMenuViewController alloc] init];
+        menuVC.view.backgroundColor = [UIColor redColor];
+        //设置master控制器
+        [self addChildViewController:menuVC];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
