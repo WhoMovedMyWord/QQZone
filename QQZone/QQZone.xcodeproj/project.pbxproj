@@ -7,25 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C44408E38490BD5E176C944 /* Pods_QQZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47DEC8B6008EE063CBC0367 /* Pods_QQZone.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DFF8DC251C734C7400DE2E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC241C734C7400DE2E2F /* main.m */; };
-		DFF8DC281C734C7400DE2E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC271C734C7400DE2E2F /* AppDelegate.m */; };
-		DFF8DC2B1C734C7400DE2E2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC2A1C734C7400DE2E2F /* ViewController.m */; };
 		DFF8DC2E1C734C7400DE2E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2C1C734C7400DE2E2F /* Main.storyboard */; };
 		DFF8DC301C734C7400DE2E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */; };
 		DFF8DC331C734C7400DE2E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC311C734C7400DE2E2F /* LaunchScreen.storyboard */; };
+		DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E5F98094C944181756B2128 /* Pods-QQZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZone.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQZone/Pods-QQZone.release.xcconfig"; sourceTree = "<group>"; };
+		B8CAEF3F129833994018B836 /* Pods-QQZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQZone/Pods-QQZone.debug.xcconfig"; sourceTree = "<group>"; };
+		D47DEC8B6008EE063CBC0367 /* Pods_QQZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF8DC201C734C7400DE2E2F /* QQZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF8DC241C734C7400DE2E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DFF8DC261C734C7400DE2E2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DFF8DC271C734C7400DE2E2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DFF8DC291C734C7400DE2E2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DFF8DC2A1C734C7400DE2E2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DFF8DC2D1C734C7400DE2E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF8DC321C734C7400DE2E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF8DC341C734C7400DE2E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF8DC3A1C7407A200DE2E2F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DFF8DC3C1C7414AD00DE2E2F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DFF8DC4C1C7417BC00DE2E2F /* SJSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSplitViewController.h; sourceTree = "<group>"; };
+		DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSplitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C44408E38490BD5E176C944 /* Pods_QQZone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29F071E5015B96FC98E37C45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8CAEF3F129833994018B836 /* Pods-QQZone.debug.xcconfig */,
+				4E5F98094C944181756B2128 /* Pods-QQZone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92CF7FE3C6951F5C82B9638B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D47DEC8B6008EE063CBC0367 /* Pods_QQZone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DFF8DC171C734C7400DE2E2F = {
 			isa = PBXGroup;
 			children = (
 				DFF8DC221C734C7400DE2E2F /* QQZone */,
 				DFF8DC211C734C7400DE2E2F /* Products */,
+				29F071E5015B96FC98E37C45 /* Pods */,
+				92CF7FE3C6951F5C82B9638B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +83,7 @@
 		DFF8DC221C734C7400DE2E2F /* QQZone */ = {
 			isa = PBXGroup;
 			children = (
-				DFF8DC261C734C7400DE2E2F /* AppDelegate.h */,
-				DFF8DC271C734C7400DE2E2F /* AppDelegate.m */,
-				DFF8DC291C734C7400DE2E2F /* ViewController.h */,
-				DFF8DC2A1C734C7400DE2E2F /* ViewController.m */,
+				DFF8DC3B1C7414AD00DE2E2F /* Class */,
 				DFF8DC2C1C734C7400DE2E2F /* Main.storyboard */,
 				DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */,
 				DFF8DC311C734C7400DE2E2F /* LaunchScreen.storyboard */,
@@ -75,8 +97,124 @@
 			isa = PBXGroup;
 			children = (
 				DFF8DC241C734C7400DE2E2F /* main.m */,
+				DFF8DC3A1C7407A200DE2E2F /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF8DC3B1C7414AD00DE2E2F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC3C1C7414AD00DE2E2F /* AppDelegate.h */,
+				DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */,
+				DFF8DC3E1C7414AD00DE2E2F /* Category */,
+				DFF8DC3F1C7414AD00DE2E2F /* Lib */,
+				DFF8DC401C7414AD00DE2E2F /* Model */,
+				DFF8DC411C7414AD00DE2E2F /* Module */,
+				DFF8DC451C7414AD00DE2E2F /* Tool */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		DFF8DC3E1C7414AD00DE2E2F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DFF8DC3F1C7414AD00DE2E2F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		DFF8DC401C7414AD00DE2E2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DFF8DC411C7414AD00DE2E2F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC421C7414AD00DE2E2F /* iPad */,
+				DFF8DC431C7414AD00DE2E2F /* iPhone */,
+				DFF8DC441C7414AD00DE2E2F /* Universal */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DFF8DC421C7414AD00DE2E2F /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		DFF8DC431C7414AD00DE2E2F /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		DFF8DC441C7414AD00DE2E2F /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC471C74177000DE2E2F /* main */,
+			);
+			path = Universal;
+			sourceTree = "<group>";
+		};
+		DFF8DC451C7414AD00DE2E2F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		DFF8DC471C74177000DE2E2F /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC481C74177000DE2E2F /* iPad */,
+				DFF8DC4A1C74177000DE2E2F /* iPhone */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		DFF8DC481C74177000DE2E2F /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC491C74177000DE2E2F /* Controller */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		DFF8DC491C74177000DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC4C1C7417BC00DE2E2F /* SJSplitViewController.h */,
+				DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC4A1C74177000DE2E2F /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC4B1C74177000DE2E2F /* Controller */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		DFF8DC4B1C74177000DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFF8DC371C734C7400DE2E2F /* Build configuration list for PBXNativeTarget "QQZone" */;
 			buildPhases = (
+				ADB3B7343A6E28243FEB830F /* Check Pods Manifest.lock */,
 				DFF8DC1C1C734C7400DE2E2F /* Sources */,
 				DFF8DC1D1C734C7400DE2E2F /* Frameworks */,
 				DFF8DC1E1C734C7400DE2E2F /* Resources */,
+				CCC638D5917C819331066411 /* Embed Pods Frameworks */,
+				C25D5EF8ECF498F2C63DB31D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,13 +285,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ADB3B7343A6E28243FEB830F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C25D5EF8ECF498F2C63DB31D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQZone/Pods-QQZone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCC638D5917C819331066411 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQZone/Pods-QQZone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFF8DC1C1C734C7400DE2E2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFF8DC2B1C734C7400DE2E2F /* ViewController.m in Sources */,
-				DFF8DC281C734C7400DE2E2F /* AppDelegate.m in Sources */,
+				DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */,
+				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC251C734C7400DE2E2F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,23 +448,29 @@
 		};
 		DFF8DC381C734C7400DE2E2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8CAEF3F129833994018B836 /* Pods-QQZone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QQZone/PrefixHeader.pch";
 				INFOPLIST_FILE = QQZone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.world.QQZone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		DFF8DC391C734C7400DE2E2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5F98094C944181756B2128 /* Pods-QQZone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QQZone/PrefixHeader.pch";
 				INFOPLIST_FILE = QQZone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.world.QQZone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -298,6 +493,7 @@
 				DFF8DC391C734C7400DE2E2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  QQZone
+//
+//  Created by app;e on 16/2/17.
+//  Copyright © 2016年 world. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
+
+    //自定义Log
+    #ifdef DEBUG //开发阶段
+    // #define  CZLog(...) NSLog(__VA_ARGS__)
+    #define  SJLog(...) NSLog(@"%s %d \n %@ \n\n",__func__,__LINE__, [NSString stringWithFormat:__VA_ARGS__]);
+    #elif        //发布阶段
+    #define  SJLog(...)
+    #endif
+
+    //判断运行设备是否是iphone
+    #define isIPhone ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+
+#endif
