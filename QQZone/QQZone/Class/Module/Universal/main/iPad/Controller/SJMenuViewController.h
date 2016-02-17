@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SJMenuViewController : UIViewController
+/**
+ *  容器视图是否显示
+ *
+ *  @param isShow <#isShow description#>
+ */
+- (void)showContainer:(BOOL)isShow;
 
 @end

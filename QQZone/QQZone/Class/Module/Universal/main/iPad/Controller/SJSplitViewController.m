@@ -7,6 +7,7 @@
 //
 
 #import "SJSplitViewController.h"
+#import "SJMenuViewController.h"
 
 @interface SJSplitViewController ()
 
@@ -41,6 +42,25 @@
         self.maximumPrimaryColumnWidth = 60;
     }
 
+}
+
+/**
+ *  当splitVC的sizeClass改变的时候会调用
+ *  UITraitCollection 与sizeClass相关的属性存放在该类中
+ *  @param previousTraitCollection  之前的sizeClasses属性
+ */
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
+    SJLog(@"%@",previousTraitCollection);
+    //获取masterVC. spliteVC有2个控制器  第一个就是masterVC
+    SJMenuViewController *menuVC = self.childViewControllers[0];
+    //判断
+    if(![menuVC isKindOfClass:[SJMenuViewController class]]){
+        return;
+    }
+    //splitVC的当前sizeClasses
+    UITraitCollection *currentCollection = self.traitCollection;
+    BOOL isShow = currentCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact;
+    [menuVC showContainer:isShow];
 }
 
 @end

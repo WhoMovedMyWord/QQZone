@@ -9,6 +9,8 @@
 #import "SJMenuViewController.h"
 
 @interface SJMenuViewController ()
+//容器视图,显示的是iphone的界面,只有当spliteVC的宽度是紧凑的时候才显示
+@property (weak, nonatomic) IBOutlet UIView *container;
 
 @end
 
@@ -19,19 +21,12 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  容器视图是否显示
+ *
+ *  @param isShow <#isShow description#>
+ */
+- (void)showContainer:(BOOL)isShow{
+    self.container.hidden = !isShow;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

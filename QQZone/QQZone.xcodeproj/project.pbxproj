@@ -15,6 +15,7 @@
 		DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC501C744D1800DE2E2F /* SJMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DFF8DC541C745D8500DE2E2F /* SJMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC531C745D8500DE2E2F /* SJMainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSplitViewController.m; sourceTree = "<group>"; };
 		DFF8DC4F1C744D1800DE2E2F /* SJMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMenuViewController.h; sourceTree = "<group>"; };
 		DFF8DC501C744D1800DE2E2F /* SJMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMenuViewController.m; sourceTree = "<group>"; };
+		DFF8DC521C745D8500DE2E2F /* SJMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMainTableViewController.h; sourceTree = "<group>"; };
+		DFF8DC531C745D8500DE2E2F /* SJMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMainTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +115,7 @@
 				DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */,
 				DFF8DC3E1C7414AD00DE2E2F /* Category */,
 				DFF8DC3F1C7414AD00DE2E2F /* Lib */,
-				DFF8DC401C7414AD00DE2E2F /* Model */,
+				DFF8DC401C7414AD00DE2E2F /* Model(全局模型) */,
 				DFF8DC411C7414AD00DE2E2F /* Module */,
 				DFF8DC451C7414AD00DE2E2F /* Tool */,
 			);
@@ -133,42 +136,43 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
-		DFF8DC401C7414AD00DE2E2F /* Model */ = {
+		DFF8DC401C7414AD00DE2E2F /* Model(全局模型) */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "Model(全局模型)";
 			path = Model;
 			sourceTree = "<group>";
 		};
 		DFF8DC411C7414AD00DE2E2F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				DFF8DC421C7414AD00DE2E2F /* iPad */,
-				DFF8DC431C7414AD00DE2E2F /* iPhone */,
-				DFF8DC441C7414AD00DE2E2F /* Universal */,
+				DFF8DC591C745EDC00DE2E2F /* iPad(ipad独立模块) */,
+				DFF8DC431C7414AD00DE2E2F /* iPhone(iphone独立模块) */,
+				DFF8DC441C7414AD00DE2E2F /* Universal(共有模块) */,
 			);
 			path = Module;
 			sourceTree = "<group>";
 		};
-		DFF8DC421C7414AD00DE2E2F /* iPad */ = {
+		DFF8DC431C7414AD00DE2E2F /* iPhone(iphone独立模块) */ = {
 			isa = PBXGroup;
 			children = (
+				DFF8DC5E1C745EE800DE2E2F /* Zone(我的空间) */,
 			);
-			path = iPad;
-			sourceTree = "<group>";
-		};
-		DFF8DC431C7414AD00DE2E2F /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-			);
+			name = "iPhone(iphone独立模块)";
 			path = iPhone;
 			sourceTree = "<group>";
 		};
-		DFF8DC441C7414AD00DE2E2F /* Universal */ = {
+		DFF8DC441C7414AD00DE2E2F /* Universal(共有模块) */ = {
 			isa = PBXGroup;
 			children = (
-				DFF8DC471C74177000DE2E2F /* main */,
+				DFF8DC601C745F2700DE2E2F /* AboultMe(与我相关) */,
+				DFF8DC621C745F2700DE2E2F /* Compose(发说说) */,
+				DFF8DC641C745F2700DE2E2F /* Home(动态) */,
+				DFF8DC661C745F2700DE2E2F /* More(更多) */,
+				DFF8DC471C74177000DE2E2F /* main(主界面) */,
 			);
+			name = "Universal(共有模块)";
 			path = Universal;
 			sourceTree = "<group>";
 		};
@@ -179,12 +183,13 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		DFF8DC471C74177000DE2E2F /* main */ = {
+		DFF8DC471C74177000DE2E2F /* main(主界面) */ = {
 			isa = PBXGroup;
 			children = (
 				DFF8DC481C74177000DE2E2F /* iPad */,
 				DFF8DC4A1C74177000DE2E2F /* iPhone */,
 			);
+			name = "main(主界面)";
 			path = main;
 			sourceTree = "<group>";
 		};
@@ -216,6 +221,130 @@
 			sourceTree = "<group>";
 		};
 		DFF8DC4B1C74177000DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC521C745D8500DE2E2F /* SJMainTableViewController.h */,
+				DFF8DC531C745D8500DE2E2F /* SJMainTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC591C745EDC00DE2E2F /* iPad(ipad独立模块) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC5A1C745EDC00DE2E2F /* Album(电子相册) */,
+				DFF8DC5C1C745EDC00DE2E2F /* PictureWall(照片墙) */,
+			);
+			name = "iPad(ipad独立模块)";
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		DFF8DC5A1C745EDC00DE2E2F /* Album(电子相册) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC5B1C745EDC00DE2E2F /* Controller */,
+			);
+			name = "Album(电子相册)";
+			path = Album;
+			sourceTree = "<group>";
+		};
+		DFF8DC5B1C745EDC00DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC5C1C745EDC00DE2E2F /* PictureWall(照片墙) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC5D1C745EDC00DE2E2F /* Controller */,
+			);
+			name = "PictureWall(照片墙)";
+			path = PictureWall;
+			sourceTree = "<group>";
+		};
+		DFF8DC5D1C745EDC00DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC5E1C745EE800DE2E2F /* Zone(我的空间) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC5F1C745EE800DE2E2F /* Controller */,
+			);
+			name = "Zone(我的空间)";
+			path = Zone;
+			sourceTree = "<group>";
+		};
+		DFF8DC5F1C745EE800DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC601C745F2700DE2E2F /* AboultMe(与我相关) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC611C745F2700DE2E2F /* Controller */,
+			);
+			name = "AboultMe(与我相关)";
+			path = AboultMe;
+			sourceTree = "<group>";
+		};
+		DFF8DC611C745F2700DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC621C745F2700DE2E2F /* Compose(发说说) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC631C745F2700DE2E2F /* Controller */,
+			);
+			name = "Compose(发说说)";
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		DFF8DC631C745F2700DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC641C745F2700DE2E2F /* Home(动态) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC651C745F2700DE2E2F /* Controller */,
+			);
+			name = "Home(动态)";
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DFF8DC651C745F2700DE2E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFF8DC661C745F2700DE2E2F /* More(更多) */ = {
+			isa = PBXGroup;
+			children = (
+				DFF8DC671C745F2700DE2E2F /* Controller */,
+			);
+			name = "More(更多)";
+			path = More;
+			sourceTree = "<group>";
+		};
+		DFF8DC671C745F2700DE2E2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -346,6 +475,7 @@
 				DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */,
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
+				DFF8DC541C745D8500DE2E2F /* SJMainTableViewController.m in Sources */,
 				DFF8DC251C734C7400DE2E2F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
