@@ -7,9 +7,17 @@
 //
 
 #import "SJMainTableViewController.h"
+#import "SJAboultMeTableViewController.h"
+#import "SJComposeTableViewController.h"
+#import "SJHomeTableViewController.h"
+#import "SJMoreTableViewController.h"
+#import "SJZoneTableViewController.h"
+
+#define kTabBarItemCount 5
+#define kAddButtonOffSet 2
 
 @interface SJMainTableViewController ()
-
+@property(nonatomic,strong) UIButton *addButton;
 @end
 
 @implementation SJMainTableViewController
@@ -17,82 +25,80 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupChildViewControlls];
+    //当在viewDidLoad添加加号按钮的时候,加号按钮在tabBarButton下面,这样加号按钮的点击事件无法响应
+//    [self setupAddButton];
+}
+
+- (void)viewWillLayoutSubviews{
+    [self setupAddButton];
+}
+
+- (void)setupAddButton{
+    //将加号按钮添加到tabBar上
+    [self.tabBar addSubview:self.addButton];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //布局加号按钮
+    CGFloat h = self.tabBar.frame.size.height;
+    CGFloat w = self.tabBar.frame.size.width / kTabBarItemCount;
+    //如果设置w的时候加号按钮的宽度没办法盖住空白tabBarButton的位置.在2个tabBarItem直接的空隙还是能响应到所以需要把w加大一点.
+    //    self.addButton.frame = CGRectMake(w*2, 0, w, h);
+    self.addButton.frame = CGRectMake(w*2-kAddButtonOffSet, 0, w+2*kAddButtonOffSet, h);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+/**
+ *  添加子控件
+ */
+- (void)setupChildViewControlls{
+    //动态
+    SJHomeTableViewController *homeVC = [[SJHomeTableViewController alloc] init];
+    [self addChildViewController:homeVC withTitle:@"动态" withImgName:@"tabbar_icon_auth"];
     
-    // Configure the cell...
+    //与我相关
+    SJAboultMeTableViewController *aboultMeVC = [[SJAboultMeTableViewController alloc] init];
+    [self addChildViewController:aboultMeVC withTitle:@"与我相关" withImgName:@"tabbar_icon_at"];
     
-    return cell;
+    //添加一个空白占位按钮
+    [self addChildViewController:[[UIViewController alloc] init]];
+    
+    //我的空间
+    SJZoneTableViewController *zoneVC = [[SJZoneTableViewController alloc] init];
+    [self addChildViewController:zoneVC withTitle:@"我的空间" withImgName:@"tabbar_icon_space"];
+    
+    //更多
+    SJMoreTableViewController *moreVC = [[SJMoreTableViewController alloc] init];
+    [self addChildViewController:moreVC withTitle:@"更多" withImgName:@"tabbar_icon_more"];
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)addChildViewController:(UIViewController *)vc withTitle:(NSString *)title withImgName:(NSString *)imgName{
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    NSString *selImgName = [NSString stringWithFormat:@"%@_click",imgName];
+    //tabBar图片
+    nav.tabBarItem.image = [UIImage imageNamed:imgName];
+    //tabBar选中图片
+    UIImage *selImg = [[UIImage imageNamed:selImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    nav.tabBarItem.selectedImage = selImg;
+    [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateHighlighted];
+    //只是设置tabBar的标题
+    //    nav.tabBarItem.title = title;
+    //设置tabBar与当前控制器的标题
+    vc.title = title;
+    [self addChildViewController:nav];
+
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark - 懒加载
+- (UIButton *)addButton{
+    
+    if (_addButton == nil) {
+        _addButton = [[UIButton alloc] init];
+        [_addButton setImage:[UIImage imageNamed:@"tabbar_btn"] forState:UIControlStateNormal];
+        //填充模式
+        _addButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    
+    return _addButton;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

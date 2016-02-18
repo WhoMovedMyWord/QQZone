@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SJMainTableViewController : UITableViewController
+@interface SJMainTableViewController : UITabBarController
 
 @end

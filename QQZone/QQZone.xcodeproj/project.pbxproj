@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4C44408E38490BD5E176C944 /* Pods_QQZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47DEC8B6008EE063CBC0367 /* Pods_QQZone.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DF7C3F471C7596880017B8A8 /* SJAlbumCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F461C7596880017B8A8 /* SJAlbumCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF7C3F4A1C75969E0017B8A8 /* SJPictureWallCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F491C75969E0017B8A8 /* SJPictureWallCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF7C3F4D1C7596B50017B8A8 /* SJZoneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F4C1C7596B50017B8A8 /* SJZoneTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF7C3F501C7596C40017B8A8 /* SJAboultMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F4F1C7596C40017B8A8 /* SJAboultMeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF7C3F531C7596CF0017B8A8 /* SJComposeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F521C7596CF0017B8A8 /* SJComposeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF7C3F561C7596DA0017B8A8 /* SJHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F551C7596DA0017B8A8 /* SJHomeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF7C3F591C7596E40017B8A8 /* SJMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F581C7596E40017B8A8 /* SJMoreTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC251C734C7400DE2E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC241C734C7400DE2E2F /* main.m */; };
 		DFF8DC2E1C734C7400DE2E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2C1C734C7400DE2E2F /* Main.storyboard */; };
 		DFF8DC301C734C7400DE2E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */; };
@@ -22,6 +29,20 @@
 		4E5F98094C944181756B2128 /* Pods-QQZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZone.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQZone/Pods-QQZone.release.xcconfig"; sourceTree = "<group>"; };
 		B8CAEF3F129833994018B836 /* Pods-QQZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQZone/Pods-QQZone.debug.xcconfig"; sourceTree = "<group>"; };
 		D47DEC8B6008EE063CBC0367 /* Pods_QQZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF7C3F451C7596880017B8A8 /* SJAlbumCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAlbumCollectionViewController.h; sourceTree = "<group>"; };
+		DF7C3F461C7596880017B8A8 /* SJAlbumCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAlbumCollectionViewController.m; sourceTree = "<group>"; };
+		DF7C3F481C75969E0017B8A8 /* SJPictureWallCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPictureWallCollectionViewController.h; sourceTree = "<group>"; };
+		DF7C3F491C75969E0017B8A8 /* SJPictureWallCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPictureWallCollectionViewController.m; sourceTree = "<group>"; };
+		DF7C3F4B1C7596B50017B8A8 /* SJZoneTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJZoneTableViewController.h; sourceTree = "<group>"; };
+		DF7C3F4C1C7596B50017B8A8 /* SJZoneTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJZoneTableViewController.m; sourceTree = "<group>"; };
+		DF7C3F4E1C7596C40017B8A8 /* SJAboultMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAboultMeTableViewController.h; sourceTree = "<group>"; };
+		DF7C3F4F1C7596C40017B8A8 /* SJAboultMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAboultMeTableViewController.m; sourceTree = "<group>"; };
+		DF7C3F511C7596CF0017B8A8 /* SJComposeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJComposeTableViewController.h; sourceTree = "<group>"; };
+		DF7C3F521C7596CF0017B8A8 /* SJComposeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJComposeTableViewController.m; sourceTree = "<group>"; };
+		DF7C3F541C7596DA0017B8A8 /* SJHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJHomeTableViewController.h; sourceTree = "<group>"; };
+		DF7C3F551C7596DA0017B8A8 /* SJHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJHomeTableViewController.m; sourceTree = "<group>"; };
+		DF7C3F571C7596E40017B8A8 /* SJMoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMoreTableViewController.h; sourceTree = "<group>"; };
+		DF7C3F581C7596E40017B8A8 /* SJMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMoreTableViewController.m; sourceTree = "<group>"; };
 		DFF8DC201C734C7400DE2E2F /* QQZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF8DC241C734C7400DE2E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF8DC2D1C734C7400DE2E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -251,6 +272,8 @@
 		DFF8DC5B1C745EDC00DE2E2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DF7C3F451C7596880017B8A8 /* SJAlbumCollectionViewController.h */,
+				DF7C3F461C7596880017B8A8 /* SJAlbumCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +290,8 @@
 		DFF8DC5D1C745EDC00DE2E2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DF7C3F481C75969E0017B8A8 /* SJPictureWallCollectionViewController.h */,
+				DF7C3F491C75969E0017B8A8 /* SJPictureWallCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				DFF8DC5F1C745EE800DE2E2F /* Controller */,
+				DF7C3F4B1C7596B50017B8A8 /* SJZoneTableViewController.h */,
+				DF7C3F4C1C7596B50017B8A8 /* SJZoneTableViewController.m */,
 			);
 			name = "Zone(我的空间)";
 			path = Zone;
@@ -291,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				DFF8DC611C745F2700DE2E2F /* Controller */,
+				DF7C3F4E1C7596C40017B8A8 /* SJAboultMeTableViewController.h */,
+				DF7C3F4F1C7596C40017B8A8 /* SJAboultMeTableViewController.m */,
 			);
 			name = "AboultMe(与我相关)";
 			path = AboultMe;
@@ -307,6 +336,8 @@
 			isa = PBXGroup;
 			children = (
 				DFF8DC631C745F2700DE2E2F /* Controller */,
+				DF7C3F511C7596CF0017B8A8 /* SJComposeTableViewController.h */,
+				DF7C3F521C7596CF0017B8A8 /* SJComposeTableViewController.m */,
 			);
 			name = "Compose(发说说)";
 			path = Compose;
@@ -323,6 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				DFF8DC651C745F2700DE2E2F /* Controller */,
+				DF7C3F541C7596DA0017B8A8 /* SJHomeTableViewController.h */,
+				DF7C3F551C7596DA0017B8A8 /* SJHomeTableViewController.m */,
 			);
 			name = "Home(动态)";
 			path = Home;
@@ -347,6 +380,8 @@
 		DFF8DC671C745F2700DE2E2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DF7C3F571C7596E40017B8A8 /* SJMoreTableViewController.h */,
+				DF7C3F581C7596E40017B8A8 /* SJMoreTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,6 +415,7 @@
 		DFF8DC181C734C7400DE2E2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SJ;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = world;
 				TargetAttributes = {
@@ -473,10 +509,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */,
+				DF7C3F591C7596E40017B8A8 /* SJMoreTableViewController.m in Sources */,
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
+				DF7C3F501C7596C40017B8A8 /* SJAboultMeTableViewController.m in Sources */,
 				DFF8DC541C745D8500DE2E2F /* SJMainTableViewController.m in Sources */,
+				DF7C3F531C7596CF0017B8A8 /* SJComposeTableViewController.m in Sources */,
 				DFF8DC251C734C7400DE2E2F /* main.m in Sources */,
+				DF7C3F4A1C75969E0017B8A8 /* SJPictureWallCollectionViewController.m in Sources */,
+				DF7C3F4D1C7596B50017B8A8 /* SJZoneTableViewController.m in Sources */,
+				DF7C3F561C7596DA0017B8A8 /* SJHomeTableViewController.m in Sources */,
+				DF7C3F471C7596880017B8A8 /* SJAlbumCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
