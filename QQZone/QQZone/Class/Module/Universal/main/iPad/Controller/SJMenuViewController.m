@@ -10,9 +10,13 @@
 #import "SJMainTableViewController.h"
 #import "SJMenuItem.h"
 #import "SJMenuItemViewModel.h"
+#import "SJMenuButton.h"
 
 #define kMiddleButtonHeight 60
 #define kMiddleButtonCount 6
+#define kBottmoLandscapeHeight 90
+#define kBottomPortraitHeight 180
+
 @interface SJMenuViewController ()
 //容器视图,显示的是iphone的tabBar界面,只有当spliteVC的宽度是紧凑的时候才显示
 @property (weak, nonatomic) IBOutlet UIView *container;
@@ -24,6 +28,8 @@
 
 //menvItemVM
 @property (nonatomic, strong) SJMenuItemViewModel *menuItemVM;
+//记录相中按钮
+@property(nonatomic,strong) SJMenuButton *selectedBtn;
 
 @end
 
@@ -31,13 +37,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithWhite:34/250.0 alpha:1];
     //容器view
     [self setupContainerView];
     //master底部的stackView
     [self prepareBottomStackView];
     //masterVC 中间的stackView
     [self prepareMiddleStackView];
+    
+    //默认选中第一个按钮
+    [self menuButtonClick:self.middleStackView.arrangedSubviews[0]];
+    
 }
+/**
+ *  当ipad屏幕发送改变的时候就需要调用该方法进行更新
+ *  当屏幕方向发生改变的时候,stackView的子控件布局需要改变
+ *
+ *  @param isLandscape 是否是横屏
+ */
+- (void)updateSubViews:(BOOL)isLandscape{
+    //根据横竖屏设置高度
+    CGFloat height = isLandscape ? kBottmoLandscapeHeight : kBottomPortraitHeight;
+    //根据横竖屏改变bottomStackView子控件的布局方式
+    self.bottomStackView.axis = isLandscape ? UILayoutConstraintAxisHorizontal :UILayoutConstraintAxisVertical;
+    //利用Masonry更新约束
+    [self.bottomStackView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(height));
+    }];
+    
+    //当屏幕方向改变到时候调用, 根据屏幕方向来设置menuButton的内容对齐模式,文字是否显示
+    for (SJMenuButton *btn in self.middleStackView.arrangedSubviews) {
+        [btn setupButton:isLandscape];
+    }
+}
+
 /**
  *  准备容器view
  */
@@ -81,7 +114,7 @@
     [self.bottomStackView mas_makeConstraints:^(MASConstraintMaker *make) {
         //stackView的右边与当前view的右边相等. 底部,左侧一样
         make.trailing.leading.bottom.equalTo(self.view);
-        make.height.equalTo(@90);
+        make.height.equalTo(@(kBottmoLandscapeHeight));
     }];
     
 //    //3.准备数据
@@ -97,8 +130,10 @@
     
     //4.创建子控件
     for (SJMenuItem *item in self.menuItemVM.composeItems) {
-        UIButton *btn = [[UIButton alloc] init];
-        [btn setTitle:item.title forState:UIControlStateNormal];
+//        UIButton *btn = [[UIButton alloc] init];
+//        [btn setTitle:item.title forState:UIControlStateNormal];
+//        [btn setImage:[UIImage imageNamed:item.icon] forState:UIControlStateNormal];
+        SJMenuButton *btn = [[SJMenuButton alloc] initWithMenuItem:item];
         [self.bottomStackView addArrangedSubview:btn];
     }
     
@@ -135,11 +170,27 @@
     
     //4.创建子控件
     for (SJMenuItem *item in self.menuItemVM.menuItems) {
-        UIButton *btn = [[UIButton alloc] init];
-        [btn setTitle:item.title forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:item.icon] forState:UIControlStateNormal];
+//        UIButton *btn = [[UIButton alloc] init];
+//        [btn setTitle:item.title forState:UIControlStateNormal];
+//        [btn setImage:[UIImage imageNamed:item.icon] forState:UIControlStateNormal];
+        SJMenuButton *btn = [[SJMenuButton alloc] initWithMenuItem:item];
+        [btn addTarget:self action:@selector(menuButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.middleStackView addArrangedSubview:btn];
     }
+}
+/**
+ *  menu按钮的点击事件
+ *
+ *  @param btn <#btn description#>
+ */
+- (void)menuButtonClick:(SJMenuButton *)btn{
+    //如果当前按钮 是 选中按钮 返回
+    if (self.selectedBtn == btn) {
+        return;
+    }
+    self.selectedBtn.selected = NO;
+    btn.selected = YES;
+    self.selectedBtn = btn;
 }
 
 /**

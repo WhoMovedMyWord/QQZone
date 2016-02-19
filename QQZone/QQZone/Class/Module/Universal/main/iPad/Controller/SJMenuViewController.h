@@ -16,4 +16,10 @@
  */
 - (void)showContainer:(BOOL)isShow;
 
+/**
+ *  当屏幕方向发生改变的时候,stackView的子控件布局需要改变
+ *
+ *  @param isLandscape 是否是横屏
+ */
+- (void)updateSubViews:(BOOL)isLandscape;
 @end

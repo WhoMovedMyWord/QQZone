@@ -10,7 +10,8 @@
 
 @interface SJSplitViewController : UISplitViewController
 /**
- *  设置spliteVC的屏幕的宽度
+ *  该方法在appdelegate中当屏幕发送改变的时候就会调用
+ *  设置spliteVC的屏幕的宽度,
  *
  *  @param orientation <#orientation description#>
  */

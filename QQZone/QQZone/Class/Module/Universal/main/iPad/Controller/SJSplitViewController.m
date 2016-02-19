@@ -19,7 +19,7 @@
 - (instancetype)init{
     if (self = [super init]) {
         SJMenuViewController *menuVC = [[SJMenuViewController alloc] init];
-        menuVC.view.backgroundColor = [UIColor redColor];
+//        menuVC.view.backgroundColor = [UIColor redColor];
         //设置master控制器
         [self addChildViewController:menuVC];
     }
@@ -43,19 +43,31 @@
     [self setupPrimaryColumnWidthWithOrientation:[UIApplication sharedApplication].statusBarOrientation];
 }
 
+/**
+ *  屏幕发送改变的时候会调用,来设置masterVC的宽度
+ *
+ *  @param orientation <#orientation description#>
+ */
 - (void)setupPrimaryColumnWidthWithOrientation:(UIInterfaceOrientation)orientation{
     //判断是否是横屏
     BOOL isLandSpace = UIInterfaceOrientationIsLandscape(orientation);
     
-    if (isLandSpace) {
+    if (isLandSpace) {//横屏
         self.maximumPrimaryColumnWidth = 280;
-    }else{
+    }else{//竖屏
         self.maximumPrimaryColumnWidth = 60;
     }
-
+    
+    //拿到menuVC,调用更新materVC子控件的布局
+    SJMenuViewController *menuVC = self.childViewControllers[0];
+    //判断
+    if(![menuVC isKindOfClass:[SJMenuViewController class]]){
+        return;
+    }
+    [menuVC updateSubViews:isLandSpace];
 }
 
-/**
+/** 在多任务的时候,拖动屏幕改变屏幕的宽度的时候会调用该方法
  *  当splitVC的sizeClass改变的时候会调用
  *  UITraitCollection 与sizeClass相关的属性存放在该类中
  *  @param previousTraitCollection  之前的sizeClasses属性
@@ -70,7 +82,9 @@
     }
     //splitVC的当前sizeClasses
     UITraitCollection *currentCollection = self.traitCollection;
+    //根据spliteVC的sizeClass 来决定mastervc的显示内容.
     BOOL isShow = currentCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact;
+    //当宽松显示ipad.  紧显示iphone
     [menuVC showContainer:isShow];
 }
 

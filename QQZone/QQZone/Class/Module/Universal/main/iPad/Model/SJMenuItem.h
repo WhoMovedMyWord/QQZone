@@ -13,9 +13,9 @@
 @property(nonatomic,copy) NSString *title;
 
 //图标
-
 @property(nonatomic,copy) NSString *icon;
 
+@property(nonatomic,assign,getter=isComposeBtn) BOOL composeBtn;
 
 //字典转模型
 - (instancetype)initWithDict:(NSDictionary *)dict;

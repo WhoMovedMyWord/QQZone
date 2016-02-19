@@ -14,9 +14,9 @@
     
     if (_composeItems == nil) {
         //3.准备数据
-        NSArray *titleArray = @[@{@"title":@"发说说",@"icon":@""},
-                                @{@"title":@"传照片",@"icon":@""},
-                                @{@"title":@"写日志",@"icon":@""}];
+        NSArray *titleArray = @[@{@"title":@"发说说",@"icon":@"tabbar_mood",@"composeBtn":@YES},
+                                @{@"title":@"传照片",@"icon":@"tabbar_photo",@"composeBtn":@YES},
+                                @{@"title":@"写日志",@"icon":@"tabbar_blog",@"composeBtn":@YES}];
         //3.1字典转模型
         NSMutableArray *itemArray = [NSMutableArray array];
         for (NSDictionary *dict in titleArray) {
