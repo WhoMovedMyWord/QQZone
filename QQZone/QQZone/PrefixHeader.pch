@@ -22,4 +22,7 @@
     //判断运行设备是否是iphone
     #define isIPhone ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
 
+//全局的背景颜色
+#define CommandBGColor [UIColor colorWithWhite:34/250.0 alpha:1]
+
 #endif

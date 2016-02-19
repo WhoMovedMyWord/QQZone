@@ -18,6 +18,8 @@
 		DF7C40D01C76AED20017B8A8 /* SJMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C40CF1C76AED20017B8A8 /* SJMenuItem.m */; settings = {ASSET_TAGS = (); }; };
 		DF9BA4861C76B6C00089D9C6 /* SJMenuItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9BA4851C76B6C00089D9C6 /* SJMenuItemViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		DF9BA48A1C76C1F40089D9C6 /* SJMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9BA4891C76C1F40089D9C6 /* SJMenuButton.m */; settings = {ASSET_TAGS = (); }; };
+		DFC1771C1C76F97200561DAE /* SJDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC1771B1C76F97200561DAE /* SJDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DFDB4F1A1C7714CD000E49EA /* pxh.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DFDB4F191C7714CD000E49EA /* pxh.JPG */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC251C734C7400DE2E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC241C734C7400DE2E2F /* main.m */; };
 		DFF8DC2E1C734C7400DE2E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2C1C734C7400DE2E2F /* Main.storyboard */; };
 		DFF8DC301C734C7400DE2E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */; };
@@ -52,6 +54,9 @@
 		DF9BA4851C76B6C00089D9C6 /* SJMenuItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMenuItemViewModel.m; sourceTree = "<group>"; };
 		DF9BA4881C76C1F40089D9C6 /* SJMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMenuButton.h; sourceTree = "<group>"; };
 		DF9BA4891C76C1F40089D9C6 /* SJMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMenuButton.m; sourceTree = "<group>"; };
+		DFC1771A1C76F97200561DAE /* SJDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJDetailViewController.h; sourceTree = "<group>"; };
+		DFC1771B1C76F97200561DAE /* SJDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJDetailViewController.m; sourceTree = "<group>"; };
+		DFDB4F191C7714CD000E49EA /* pxh.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pxh.JPG; sourceTree = "<group>"; };
 		DFF8DC201C734C7400DE2E2F /* QQZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF8DC241C734C7400DE2E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF8DC2D1C734C7400DE2E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 		DFF8DC231C734C7400DE2E2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DFDB4F191C7714CD000E49EA /* pxh.JPG */,
 				DFF8DC241C734C7400DE2E2F /* main.m */,
 				DFF8DC3A1C7407A200DE2E2F /* PrefixHeader.pch */,
 			);
@@ -268,6 +274,8 @@
 				DFF8DC4D1C7417BC00DE2E2F /* SJSplitViewController.m */,
 				DFF8DC4F1C744D1800DE2E2F /* SJMenuViewController.h */,
 				DFF8DC501C744D1800DE2E2F /* SJMenuViewController.m */,
+				DFC1771A1C76F97200561DAE /* SJDetailViewController.h */,
+				DFC1771B1C76F97200561DAE /* SJDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -488,6 +496,7 @@
 			files = (
 				DFF8DC331C734C7400DE2E2F /* LaunchScreen.storyboard in Resources */,
 				DFF8DC301C734C7400DE2E2F /* Assets.xcassets in Resources */,
+				DFDB4F1A1C7714CD000E49EA /* pxh.JPG in Resources */,
 				DFF8DC2E1C734C7400DE2E2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +558,7 @@
 			files = (
 				DFF8DC4E1C7417BC00DE2E2F /* SJSplitViewController.m in Sources */,
 				DF7C3F591C7596E40017B8A8 /* SJMoreTableViewController.m in Sources */,
+				DFC1771C1C76F97200561DAE /* SJDetailViewController.m in Sources */,
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
 				DF9BA48A1C76C1F40089D9C6 /* SJMenuButton.m in Sources */,

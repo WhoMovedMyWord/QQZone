@@ -11,6 +11,7 @@
 #import "SJMenuItem.h"
 #import "SJMenuItemViewModel.h"
 #import "SJMenuButton.h"
+#import "SJDetailViewController.h"
 
 #define kMiddleButtonHeight 60
 #define kMiddleButtonCount 6
@@ -48,7 +49,7 @@ const int kUserIconPortairWH = 40;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithWhite:34/250.0 alpha:1];
+    self.view.backgroundColor = CommandBGColor;
     //容器view
     [self setupContainerView];
     //master底部的stackView
@@ -239,6 +240,14 @@ const int kUserIconPortairWH = 40;
     self.selectedBtn.selected = NO;
     btn.selected = YES;
     self.selectedBtn = btn;
+    
+    //调用详情控制器的对应方法,创建对应的内容控制器
+    //1.获取对应按钮的模型
+    SJMenuItem *item = btn.item;
+    //2.拿到详情控制器
+    //注意不能通过alloc init来创建详情控制器.
+    SJDetailViewController *detailVC = self.splitViewController.childViewControllers[1];
+    [detailVC setupContentViewWithMenuItem:item];
 }
 
 /**
@@ -284,7 +293,7 @@ const int kUserIconPortairWH = 40;
     
     if (_userIconButton == nil) {
         _userIconButton = [[UIButton alloc] init];
-        [_userIconButton setImage:[UIImage imageNamed:@"default_person_lit"] forState:UIControlStateNormal];
+        [_userIconButton setImage:[UIImage imageNamed:@"pxh.JPG"] forState:UIControlStateNormal];
     }
     
     return _userIconButton;

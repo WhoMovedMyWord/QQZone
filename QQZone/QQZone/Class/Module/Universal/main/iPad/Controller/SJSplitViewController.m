@@ -8,6 +8,7 @@
 
 #import "SJSplitViewController.h"
 #import "SJMenuViewController.h"
+#import "SJDetailViewController.h"
 
 @interface SJSplitViewController ()
 
@@ -19,9 +20,13 @@
 - (instancetype)init{
     if (self = [super init]) {
         SJMenuViewController *menuVC = [[SJMenuViewController alloc] init];
-//        menuVC.view.backgroundColor = [UIColor redColor];
         //设置master控制器
         [self addChildViewController:menuVC];
+        
+        //详情控制器
+        SJDetailViewController *detailVC = [[SJDetailViewController alloc] init];
+
+        [self addChildViewController:detailVC];
     }
     return self;
 }
@@ -29,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.view.backgroundColor = CommandBGColor;
     [self prepareSplitVC];
 }
 

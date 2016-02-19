@@ -16,6 +16,18 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
+
+- (instancetype)init{
+    if(self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]
+               ]){
+        
+    }
+    
+    
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

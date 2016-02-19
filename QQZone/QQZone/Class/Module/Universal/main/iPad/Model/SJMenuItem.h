@@ -17,6 +17,9 @@
 
 @property(nonatomic,assign,getter=isComposeBtn) BOOL composeBtn;
 
+//按钮右边对应的内容控制器的名称
+@property (nonatomic, copy) NSString *detailContentVCName;
+
 //字典转模型
 - (instancetype)initWithDict:(NSDictionary *)dict;
 

@@ -33,12 +33,12 @@
     
     if (_menuItems == nil) {
         //准备数据
-        NSArray *array = @[@{@"title":@"全部动态",@"icon":@"tab_bar_feed_icon"},
-                           @{@"title":@"与我相关",@"icon":@"tab_bar_passive_feed_icon"},
-                           @{@"title":@"照片墙",@"icon":@"tab_bar_pic_wall_icon"},
-                           @{@"title":@"电子相框",@"icon":@"tab_bar_e_album_icon"},
-                           @{@"title":@"好友",@"icon":@"tab_bar_friend_icon"},
-                           @{@"title":@"更多",@"icon":@"tab_bar_e_more_icon"}];
+        NSArray *array = @[@{@"title":@"全部动态",@"icon":@"tab_bar_feed_icon",@"detailContentVCName":@"SJHomeTableViewController"},
+                           @{@"title":@"与我相关",@"icon":@"tab_bar_passive_feed_icon",@"detailContentVCName":@"SJAboultMeTableViewController"},
+                           @{@"title":@"照片墙",@"icon":@"tab_bar_pic_wall_icon",@"detailContentVCName":@"SJPictureWallCollectionViewController"},
+                           @{@"title":@"电子相框",@"icon":@"tab_bar_e_album_icon",@"detailContentVCName":@"SJAlbumCollectionViewController"},
+                           @{@"title":@"好友",@"icon":@"tab_bar_friend_icon",@"detailContentVCName":@"SJComposeTableViewController"},
+                           @{@"title":@"更多",@"icon":@"tab_bar_e_more_icon",@"detailContentVCName":@"SJMoreTableViewController"}];
         
         //3.1字典转模型
         NSMutableArray *itemArray = [NSMutableArray array];
