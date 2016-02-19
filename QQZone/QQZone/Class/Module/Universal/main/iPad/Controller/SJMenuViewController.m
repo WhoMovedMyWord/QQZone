@@ -17,6 +17,11 @@
 #define kBottmoLandscapeHeight 90
 #define kBottomPortraitHeight 180
 
+const int kUserIconMarginTop = 60;
+const int kUserIconLandscapeWH = 100;
+const int kUserIconPortairWH = 40;
+
+
 @interface SJMenuViewController ()
 //容器视图,显示的是iphone的tabBar界面,只有当spliteVC的宽度是紧凑的时候才显示
 @property (weak, nonatomic) IBOutlet UIView *container;
@@ -31,6 +36,12 @@
 //记录相中按钮
 @property(nonatomic,strong) SJMenuButton *selectedBtn;
 
+//用户头像按钮
+@property(nonatomic,strong) UIButton *userIconButton;
+
+//用户名称label
+@property(nonatomic,strong) UILabel *nameLabel;
+
 @end
 
 @implementation SJMenuViewController
@@ -44,11 +55,40 @@
     [self prepareBottomStackView];
     //masterVC 中间的stackView
     [self prepareMiddleStackView];
+    //用户头像
+    [self prepareUserIcon];
+    //用户名称
+    [self prepareUserName];
     
     //默认选中第一个按钮
     [self menuButtonClick:self.middleStackView.arrangedSubviews[0]];
     
 }
+
+/**
+ *  准备用户头像
+ */
+- (void)prepareUserIcon{
+    [self.view addSubview:self.userIconButton];
+    
+    [self.userIconButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.view).offset(60);
+        make.width.height.equalTo(@100);
+    }];
+}
+/**
+ *  准备用户名称
+ */
+- (void)prepareUserName{
+    [self.view addSubview:self.nameLabel];
+    
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.userIconButton);
+        make.top.equalTo(self.userIconButton.mas_bottom).offset(10);
+    }];
+}
+
 /**
  *  当ipad屏幕发送改变的时候就需要调用该方法进行更新
  *  当屏幕方向发生改变的时候,stackView的子控件布局需要改变
@@ -69,6 +109,14 @@
     for (SJMenuButton *btn in self.middleStackView.arrangedSubviews) {
         [btn setupButton:isLandscape];
     }
+    
+    //屏幕旋转的时候重新约束用户头像
+    [self.userIconButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        CGSize iconSize = isLandscape ? CGSizeMake(kUserIconLandscapeWH, kUserIconLandscapeWH) : CGSizeMake(kUserIconPortairWH, kUserIconPortairWH);
+        make.size.mas_equalTo(iconSize);
+    }];
+    
+    self.nameLabel.hidden = !isLandscape;
 }
 
 /**
@@ -230,6 +278,28 @@
     }
     
     return _menuItemVM;
+}
+//用户头像
+- (UIButton *)userIconButton{
+    
+    if (_userIconButton == nil) {
+        _userIconButton = [[UIButton alloc] init];
+        [_userIconButton setImage:[UIImage imageNamed:@"default_person_lit"] forState:UIControlStateNormal];
+    }
+    
+    return _userIconButton;
+}
+
+//用户名称
+- (UILabel *)nameLabel{
+    
+    if (_nameLabel == nil) {
+        _nameLabel = [[UILabel alloc] init];
+        _nameLabel.text = @"谁动了MyWrold";
+        _nameLabel.textColor = [UIColor whiteColor];
+    }
+    
+    return _nameLabel;
 }
 
 
