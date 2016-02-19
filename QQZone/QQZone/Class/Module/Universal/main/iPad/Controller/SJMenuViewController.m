@@ -8,12 +8,17 @@
 
 #import "SJMenuViewController.h"
 #import "SJMainTableViewController.h"
+
+#define kMiddleButtonHeight 60
+#define kMiddleButtonCount 6
 @interface SJMenuViewController ()
 //容器视图,显示的是iphone的tabBar界面,只有当spliteVC的宽度是紧凑的时候才显示
 @property (weak, nonatomic) IBOutlet UIView *container;
 
 //masterVC最底部的stackView
 @property(nonatomic,strong) UIStackView *bottomStackView;
+
+@property(nonatomic,strong) UIStackView *middleStackView;
 
 @end
 
@@ -25,6 +30,8 @@
     [self setupContainerView];
     //master底部的stackView
     [self prepareBottomStackView];
+    //masterVC 中间的stackView
+    [self prepareMiddleStackView];
 }
 /**
  *  准备容器view
@@ -86,6 +93,36 @@
     
 }
 
+//masterVC 中间的stackView
+- (void)prepareMiddleStackView{
+    [self.view addSubview:self.middleStackView];
+    //设置属性
+    self.middleStackView.axis = UILayoutConstraintAxisVertical;
+    self.middleStackView.distribution = UIStackViewDistributionFillEqually;
+
+    //设置约束
+    CGFloat height = kMiddleButtonCount * kMiddleButtonHeight;
+    [self.middleStackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.leading.equalTo(self.view);
+        make.bottom.equalTo(self.bottomStackView.mas_top);
+        make.height.equalTo(@(height));
+    }];
+    //准备数据
+    NSArray *array = @[@{@"title":@"全部动态"},
+                            @{@"title":@"与我相关"},
+                            @{@"title":@"照片墙"},
+                            @{@"title":@"电子相框"},
+                            @{@"title":@"好友"},
+                            @{@"title":@"更多"}];
+
+    //生成按钮
+    for (NSDictionary *dic in array) {
+        UIButton *btn = [UIButton new];
+        [btn setTitle:dic[@"title"] forState:UIControlStateNormal];
+        [self.middleStackView addArrangedSubview:btn];
+    }
+}
+
 /**
  *  容器视图是否显示
  *
@@ -96,6 +133,7 @@
 }
 
 #pragma mark - 懒加载
+//底部的stackView
 - (UIStackView *)bottomStackView{
     
     if (_bottomStackView == nil) {
@@ -104,5 +142,15 @@
     
     return _bottomStackView;
 }
+//中间的stackView
+- (UIStackView *)middleStackView{
+    
+    if (_middleStackView == nil) {
+        _middleStackView = [[UIStackView alloc] init];
+    }
+    
+    return _middleStackView;
+}
+
 
 @end
