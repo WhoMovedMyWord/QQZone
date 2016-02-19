@@ -8,6 +8,7 @@
 
 #import "SJMenuViewController.h"
 #import "SJMainTableViewController.h"
+#import "SJMenuItem.h"
 
 #define kMiddleButtonHeight 60
 #define kMiddleButtonCount 6
@@ -83,11 +84,17 @@
     NSArray *titleArray = @[@{@"title":@"发说说"},
                             @{@"title":@"传照片"},
                             @{@"title":@"写日志"}];
+    //3.1字典转模型
+    NSMutableArray *itemArray = [NSMutableArray array];
+    for (NSDictionary *dict in titleArray) {
+        SJMenuItem *menuItem = [SJMenuItem menuItemWithDict:dict];
+        [itemArray addObject:menuItem];
+    }
     
     //4.创建子控件
-    for (NSDictionary *dic in titleArray) {
+    for (SJMenuItem *item in itemArray) {
         UIButton *btn = [[UIButton alloc] init];
-        [btn setTitle:dic[@"title"] forState:UIControlStateNormal];
+        [btn setTitle:item.title forState:UIControlStateNormal];
         [self.bottomStackView addArrangedSubview:btn];
     }
     
@@ -115,10 +122,17 @@
                             @{@"title":@"好友"},
                             @{@"title":@"更多"}];
 
-    //生成按钮
-    for (NSDictionary *dic in array) {
-        UIButton *btn = [UIButton new];
-        [btn setTitle:dic[@"title"] forState:UIControlStateNormal];
+    //3.1字典转模型
+    NSMutableArray *itemArray = [NSMutableArray array];
+    for (NSDictionary *dict in array) {
+        SJMenuItem *menuItem = [SJMenuItem menuItemWithDict:dict];
+        [itemArray addObject:menuItem];
+    }
+    
+    //4.创建子控件
+    for (SJMenuItem *item in itemArray) {
+        UIButton *btn = [[UIButton alloc] init];
+        [btn setTitle:item.title forState:UIControlStateNormal];
         [self.middleStackView addArrangedSubview:btn];
     }
 }
