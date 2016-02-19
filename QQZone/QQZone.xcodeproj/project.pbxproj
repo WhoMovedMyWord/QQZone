@@ -16,6 +16,7 @@
 		DF7C3F561C7596DA0017B8A8 /* SJHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F551C7596DA0017B8A8 /* SJHomeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DF7C3F591C7596E40017B8A8 /* SJMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F581C7596E40017B8A8 /* SJMoreTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DF7C40D01C76AED20017B8A8 /* SJMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C40CF1C76AED20017B8A8 /* SJMenuItem.m */; settings = {ASSET_TAGS = (); }; };
+		DF9BA4861C76B6C00089D9C6 /* SJMenuItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9BA4851C76B6C00089D9C6 /* SJMenuItemViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC251C734C7400DE2E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC241C734C7400DE2E2F /* main.m */; };
 		DFF8DC2E1C734C7400DE2E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2C1C734C7400DE2E2F /* Main.storyboard */; };
 		DFF8DC301C734C7400DE2E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		DF7C3F581C7596E40017B8A8 /* SJMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMoreTableViewController.m; sourceTree = "<group>"; };
 		DF7C40CE1C76AED20017B8A8 /* SJMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMenuItem.h; sourceTree = "<group>"; };
 		DF7C40CF1C76AED20017B8A8 /* SJMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMenuItem.m; sourceTree = "<group>"; };
+		DF9BA4841C76B6C00089D9C6 /* SJMenuItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMenuItemViewModel.h; sourceTree = "<group>"; };
+		DF9BA4851C76B6C00089D9C6 /* SJMenuItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMenuItemViewModel.m; sourceTree = "<group>"; };
 		DFF8DC201C734C7400DE2E2F /* QQZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF8DC241C734C7400DE2E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF8DC2D1C734C7400DE2E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +102,15 @@
 				DF7C40CF1C76AED20017B8A8 /* SJMenuItem.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DF9BA4831C76B68C0089D9C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DF9BA4841C76B6C00089D9C6 /* SJMenuItemViewModel.h */,
+				DF9BA4851C76B6C00089D9C6 /* SJMenuItemViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DFF8DC171C734C7400DE2E2F = {
@@ -229,6 +241,7 @@
 		DFF8DC481C74177000DE2E2F /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				DF9BA4831C76B68C0089D9C6 /* ViewModel */,
 				DF7C40CD1C76AEBE0017B8A8 /* Model */,
 				DFF8DC491C74177000DE2E2F /* Controller */,
 			);
@@ -526,6 +539,7 @@
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
 				DF7C3F501C7596C40017B8A8 /* SJAboultMeTableViewController.m in Sources */,
+				DF9BA4861C76B6C00089D9C6 /* SJMenuItemViewModel.m in Sources */,
 				DFF8DC541C745D8500DE2E2F /* SJMainTableViewController.m in Sources */,
 				DF7C3F531C7596CF0017B8A8 /* SJComposeTableViewController.m in Sources */,
 				DF7C40D01C76AED20017B8A8 /* SJMenuItem.m in Sources */,

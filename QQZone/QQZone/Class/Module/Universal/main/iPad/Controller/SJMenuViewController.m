@@ -9,6 +9,7 @@
 #import "SJMenuViewController.h"
 #import "SJMainTableViewController.h"
 #import "SJMenuItem.h"
+#import "SJMenuItemViewModel.h"
 
 #define kMiddleButtonHeight 60
 #define kMiddleButtonCount 6
@@ -20,6 +21,9 @@
 @property(nonatomic,strong) UIStackView *bottomStackView;
 
 @property(nonatomic,strong) UIStackView *middleStackView;
+
+//menvItemVM
+@property (nonatomic, strong) SJMenuItemViewModel *menuItemVM;
 
 @end
 
@@ -80,19 +84,19 @@
         make.height.equalTo(@90);
     }];
     
-    //3.准备数据
-    NSArray *titleArray = @[@{@"title":@"发说说"},
-                            @{@"title":@"传照片"},
-                            @{@"title":@"写日志"}];
-    //3.1字典转模型
-    NSMutableArray *itemArray = [NSMutableArray array];
-    for (NSDictionary *dict in titleArray) {
-        SJMenuItem *menuItem = [SJMenuItem menuItemWithDict:dict];
-        [itemArray addObject:menuItem];
-    }
+//    //3.准备数据
+//    NSArray *titleArray = @[@{@"title":@"发说说",@"icon":@""},
+//                            @{@"title":@"传照片",@"icon":@""},
+//                            @{@"title":@"写日志",@"icon":@""}];
+//    //3.1字典转模型
+//    NSMutableArray *itemArray = [NSMutableArray array];
+//    for (NSDictionary *dict in titleArray) {
+//        SJMenuItem *menuItem = [SJMenuItem menuItemWithDict:dict];
+//        [itemArray addObject:menuItem];
+//    }
     
     //4.创建子控件
-    for (SJMenuItem *item in itemArray) {
+    for (SJMenuItem *item in self.menuItemVM.composeItems) {
         UIButton *btn = [[UIButton alloc] init];
         [btn setTitle:item.title forState:UIControlStateNormal];
         [self.bottomStackView addArrangedSubview:btn];
@@ -114,25 +118,26 @@
         make.bottom.equalTo(self.bottomStackView.mas_top);
         make.height.equalTo(@(height));
     }];
-    //准备数据
-    NSArray *array = @[@{@"title":@"全部动态"},
-                            @{@"title":@"与我相关"},
-                            @{@"title":@"照片墙"},
-                            @{@"title":@"电子相框"},
-                            @{@"title":@"好友"},
-                            @{@"title":@"更多"}];
-
-    //3.1字典转模型
-    NSMutableArray *itemArray = [NSMutableArray array];
-    for (NSDictionary *dict in array) {
-        SJMenuItem *menuItem = [SJMenuItem menuItemWithDict:dict];
-        [itemArray addObject:menuItem];
-    }
+//    //准备数据
+//    NSArray *array = @[@{@"title":@"全部动态",@"icon":@"tab_bar_feed_icon"},
+//                       @{@"title":@"与我相关",@"icon":@"tab_bar_passive_feed_icon"},
+//                       @{@"title":@"照片墙",@"icon":@"tab_bar_pic_wall_icon"},
+//                       @{@"title":@"电子相框",@"icon":@"tab_bar_e_album_icon"},
+//                       @{@"title":@"好友",@"icon":@"tab_bar_friend_icon"},
+//                       @{@"title":@"更多",@"icon":@"tab_bar_e_more_icon"}];
+//
+//    //3.1字典转模型
+//    NSMutableArray *itemArray = [NSMutableArray array];
+//    for (NSDictionary *dict in array) {
+//        SJMenuItem *menuItem = [SJMenuItem menuItemWithDict:dict];
+//        [itemArray addObject:menuItem];
+//    }
     
     //4.创建子控件
-    for (SJMenuItem *item in itemArray) {
+    for (SJMenuItem *item in self.menuItemVM.menuItems) {
         UIButton *btn = [[UIButton alloc] init];
         [btn setTitle:item.title forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:item.icon] forState:UIControlStateNormal];
         [self.middleStackView addArrangedSubview:btn];
     }
 }
@@ -164,6 +169,16 @@
     }
     
     return _middleStackView;
+}
+
+//menvItemVM
+- (SJMenuItemViewModel *)menuItemVM{
+    
+    if (_menuItemVM == nil) {
+        _menuItemVM = [[SJMenuItemViewModel alloc] init];
+    }
+    
+    return _menuItemVM;
 }
 
 

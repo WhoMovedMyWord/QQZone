@@ -19,4 +19,8 @@
 + (instancetype)menuItemWithDict:(NSDictionary *)dict{
     return [[self alloc] initWithDict:dict];
 }
+
+//- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+//    
+//}
 @end
