@@ -50,8 +50,9 @@ const int kUserIconPortairWH = 40;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = CommandBGColor;
-    //容器view
-    [self setupContainerView];
+    //容器view,如果在添加ipad内容之前设置容器view. 当多任务ipad屏幕变小
+    //ipad与iphone内容都会显示.所以要在之后添加
+//    [self setupContainerView];
     
     //master底部的stackView
     [self prepareBottomStackView];
@@ -61,6 +62,8 @@ const int kUserIconPortairWH = 40;
     [self prepareUserIcon];
     //用户名称
     [self prepareUserName];
+    
+    [self setupContainerView];
     
     //默认选中第一个按钮
     [self menuButtonClick:self.middleStackView.arrangedSubviews[0]];
