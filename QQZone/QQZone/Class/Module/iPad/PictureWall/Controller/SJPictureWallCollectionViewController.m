@@ -7,9 +7,11 @@
 //
 
 #import "SJPictureWallCollectionViewController.h"
+#import "SJTopView.h"
+#import "SJCategoryViewController.h"
 
-@interface SJPictureWallCollectionViewController ()
-
+@interface SJPictureWallCollectionViewController ()<SJTopViewDelegate>
+@property (nonatomic, strong) SJTopView *categoryTopItem;
 @end
 
 @implementation SJPictureWallCollectionViewController
@@ -31,80 +33,53 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupNavRight];
+    [self setupNavLeft];
+}
+
+- (void)setupNavLeft{
+    self.categoryTopItem = [[SJTopView alloc] init];
+    self.categoryTopItem.delegate = self;
+    self.categoryTopItem.frame = CGRectMake(0, 0, 100, 30);
+    UIBarButtonItem *categoryButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.categoryTopItem];
+    self.navigationItem.leftBarButtonItem = categoryButtonItem;
+}
+
+- (void)setupNavRight{
+
+    UIButton *mapBtn = [UIButton new];
+    [mapBtn setImage:[UIImage imageNamed:@"icon_map"] forState:UIControlStateNormal];
+    [mapBtn setImage:[UIImage imageNamed:@"icon_map_highlighted"] forState:UIControlStateHighlighted];
+//    [mapBtn sizeToFit];
+        mapBtn.frame = CGRectMake(0, 0, 80, 30);
+    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithCustomView:mapBtn];
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    UIButton *searchBtn = [UIButton new];
+    [searchBtn setImage:[UIImage imageNamed:@"icon_search"] forState:UIControlStateNormal];
+    [searchBtn setImage:[UIImage imageNamed:@"icon_search_highlighted"] forState:UIControlStateHighlighted];
+    [searchBtn sizeToFit];
+
+    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithCustomView:searchBtn];
     
-    // Do any additional setup after loading the view.
+    self.navigationItem.rightBarButtonItems = @[searchItem,mapItem];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+//SJTopViewDelegate
+- (void)topViewBtnClick:(SJTopView *)topView{
+    SJCategoryViewController *categoryVC = [[SJCategoryViewController alloc] init];
     
-    // Configure the cell
+    /*指定了modalPresentationStyle需要设置sourceView
+     reason: 'UIPopoverPresentationController (<UIPopoverPresentationController: 0x7fc2a590f900>) should have a non-nil sourceView or barButtonItem set before the presentation occurs.'
+     *** First throw call stack:
+     */
+    //样式
+    categoryVC.modalPresentationStyle = UIModalPresentationPopover;
+    //位置
+    categoryVC.popoverPresentationController.barButtonItem = self.navigationItem.leftBarButtonItem;
+    //大小
+    categoryVC.preferredContentSize = CGSizeMake(400, 400);
     
-    return cell;
+    [self presentViewController:categoryVC animated:YES completion:nil];
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
