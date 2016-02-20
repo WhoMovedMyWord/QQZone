@@ -8,7 +8,7 @@
 
 #import "SJMainTableViewController.h"
 #import "SJAboultMeTableViewController.h"
-#import "SJComposeTableViewController.h"
+#import "SJMoodViewController.h"
 #import "SJHomeTableViewController.h"
 #import "SJMoreTableViewController.h"
 #import "SJZoneTableViewController.h"
@@ -87,6 +87,17 @@
 
 }
 
+/**
+ *  加号点击事件
+ */
+- (void)addBtnClick{
+    SJMoodViewController *moodVC = [[SJMoodViewController alloc] init];
+    moodVC.title = @"写说说";
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:moodVC];
+    
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 #pragma mark - 懒加载
 - (UIButton *)addButton{
     
@@ -95,6 +106,8 @@
         [_addButton setImage:[UIImage imageNamed:@"tabbar_btn"] forState:UIControlStateNormal];
         //填充模式
         _addButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        [_addButton addTarget:self action:@selector(addBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _addButton;

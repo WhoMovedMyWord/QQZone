@@ -52,6 +52,7 @@ const int kUserIconPortairWH = 40;
     self.view.backgroundColor = CommandBGColor;
     //容器view
     [self setupContainerView];
+    
     //master底部的stackView
     [self prepareBottomStackView];
     //masterVC 中间的stackView
@@ -183,6 +184,7 @@ const int kUserIconPortairWH = 40;
 //        [btn setTitle:item.title forState:UIControlStateNormal];
 //        [btn setImage:[UIImage imageNamed:item.icon] forState:UIControlStateNormal];
         SJMenuButton *btn = [[SJMenuButton alloc] initWithMenuItem:item];
+        [btn addTarget:self action:@selector(composeButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.bottomStackView addArrangedSubview:btn];
     }
     
@@ -227,8 +229,30 @@ const int kUserIconPortairWH = 40;
         [self.middleStackView addArrangedSubview:btn];
     }
 }
+
 /**
- *  menu按钮的点击事件
+ *  底部menu按钮的点击事件
+ *
+ *  @param btn <#btn description#>
+ */
+
+- (void)composeButtonClick:(SJMenuButton *)btn{
+    //创建控制器
+    SJMenuItem *item = btn.item;
+    Class class = NSClassFromString(item.detailContentVCName);
+    UIViewController *vc = [[class alloc] init];
+    //设置title
+    vc.title = item.title;
+    //包装
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    //设置model样式
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    //model
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+/**
+ *  中间menu按钮的点击事件
  *
  *  @param btn <#btn description#>
  */
@@ -257,6 +281,10 @@ const int kUserIconPortairWH = 40;
  */
 - (void)showContainer:(BOOL)isShow{
     self.container.hidden = !isShow;
+    
+    //设置状态栏的样式
+    //iphone黑色 ipad白色
+    [UIApplication sharedApplication].statusBarStyle = isShow ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
 }
 
 #pragma mark - 懒加载
