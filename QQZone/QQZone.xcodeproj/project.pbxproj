@@ -20,6 +20,8 @@
 		DF9BA48A1C76C1F40089D9C6 /* SJMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9BA4891C76C1F40089D9C6 /* SJMenuButton.m */; settings = {ASSET_TAGS = (); }; };
 		DFC1771C1C76F97200561DAE /* SJDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC1771B1C76F97200561DAE /* SJDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DFDB4F1A1C7714CD000E49EA /* pxh.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DFDB4F191C7714CD000E49EA /* pxh.JPG */; settings = {ASSET_TAGS = (); }; };
+		DFDB4F261C77FD5F000E49EA /* SJBaseSegmenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDB4F251C77FD5F000E49EA /* SJBaseSegmenTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DFDB4F2B1C780375000E49EA /* SJMyFrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDB4F2A1C780375000E49EA /* SJMyFrendsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DFF8DC251C734C7400DE2E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF8DC241C734C7400DE2E2F /* main.m */; };
 		DFF8DC2E1C734C7400DE2E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2C1C734C7400DE2E2F /* Main.storyboard */; };
 		DFF8DC301C734C7400DE2E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF8DC2F1C734C7400DE2E2F /* Assets.xcassets */; };
@@ -57,6 +59,10 @@
 		DFC1771A1C76F97200561DAE /* SJDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJDetailViewController.h; sourceTree = "<group>"; };
 		DFC1771B1C76F97200561DAE /* SJDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJDetailViewController.m; sourceTree = "<group>"; };
 		DFDB4F191C7714CD000E49EA /* pxh.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pxh.JPG; sourceTree = "<group>"; };
+		DFDB4F241C77FD5F000E49EA /* SJBaseSegmenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBaseSegmenTableViewController.h; sourceTree = "<group>"; };
+		DFDB4F251C77FD5F000E49EA /* SJBaseSegmenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBaseSegmenTableViewController.m; sourceTree = "<group>"; };
+		DFDB4F291C780375000E49EA /* SJMyFrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJMyFrendsViewController.h; sourceTree = "<group>"; };
+		DFDB4F2A1C780375000E49EA /* SJMyFrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJMyFrendsViewController.m; sourceTree = "<group>"; };
 		DFF8DC201C734C7400DE2E2F /* QQZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF8DC241C734C7400DE2E2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF8DC2D1C734C7400DE2E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +134,32 @@
 				DF9BA4891C76C1F40089D9C6 /* SJMenuButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DFDB4F231C77FCCF000E49EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFDB4F241C77FD5F000E49EA /* SJBaseSegmenTableViewController.h */,
+				DFDB4F251C77FD5F000E49EA /* SJBaseSegmenTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFDB4F271C780354000E49EA /* MyFrends */ = {
+			isa = PBXGroup;
+			children = (
+				DFDB4F281C780367000E49EA /* controller */,
+			);
+			path = MyFrends;
+			sourceTree = "<group>";
+		};
+		DFDB4F281C780367000E49EA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFDB4F291C780375000E49EA /* SJMyFrendsViewController.h */,
+				DFDB4F2A1C780375000E49EA /* SJMyFrendsViewController.m */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		DFF8DC171C734C7400DE2E2F = {
@@ -229,6 +261,7 @@
 		DFF8DC441C7414AD00DE2E2F /* Universal(共有模块) */ = {
 			isa = PBXGroup;
 			children = (
+				DFDB4F271C780354000E49EA /* MyFrends */,
 				DFF8DC601C745F2700DE2E2F /* AboultMe(与我相关) */,
 				DFF8DC621C745F2700DE2E2F /* Compose(发说说) */,
 				DFF8DC641C745F2700DE2E2F /* Home(动态) */,
@@ -300,6 +333,7 @@
 		DFF8DC591C745EDC00DE2E2F /* iPad(ipad独立模块) */ = {
 			isa = PBXGroup;
 			children = (
+				DFDB4F231C77FCCF000E49EA /* Controller */,
 				DFF8DC5A1C745EDC00DE2E2F /* Album(电子相册) */,
 				DFF8DC5C1C745EDC00DE2E2F /* PictureWall(照片墙) */,
 			);
@@ -562,8 +596,10 @@
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
 				DF9BA48A1C76C1F40089D9C6 /* SJMenuButton.m in Sources */,
+				DFDB4F261C77FD5F000E49EA /* SJBaseSegmenTableViewController.m in Sources */,
 				DF7C3F501C7596C40017B8A8 /* SJAboultMeTableViewController.m in Sources */,
 				DF9BA4861C76B6C00089D9C6 /* SJMenuItemViewModel.m in Sources */,
+				DFDB4F2B1C780375000E49EA /* SJMyFrendsViewController.m in Sources */,
 				DFF8DC541C745D8500DE2E2F /* SJMainTableViewController.m in Sources */,
 				DF7C3F531C7596CF0017B8A8 /* SJComposeTableViewController.m in Sources */,
 				DF7C40D01C76AED20017B8A8 /* SJMenuItem.m in Sources */,

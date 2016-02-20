@@ -78,7 +78,7 @@
  *  @param previousTraitCollection  之前的sizeClasses属性
  */
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
-    SJLog(@"%@",previousTraitCollection);
+//    SJLog(@"%@",previousTraitCollection);
     //获取masterVC. spliteVC有2个控制器  第一个就是masterVC
     SJMenuViewController *menuVC = self.childViewControllers[0];
     //判断

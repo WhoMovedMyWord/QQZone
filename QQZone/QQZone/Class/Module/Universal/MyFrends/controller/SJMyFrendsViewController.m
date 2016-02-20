@@ -1,31 +1,33 @@
 //
-//  SJHomeTableViewController.m
+//  SJMyFrendsViewController.m
 //  QQZone
 //
-//  Created by app;e on 16/2/18.
+//  Created by app;e on 16/2/20.
 //  Copyright © 2016年 world. All rights reserved.
 //
 
-#import "SJHomeTableViewController.h"
+#import "SJMyFrendsViewController.h"
 
-@interface SJHomeTableViewController ()
+@interface SJMyFrendsViewController ()
 
 @end
 
-@implementation SJHomeTableViewController
+@implementation SJMyFrendsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // Do any additional setup after loading the view.
 }
+
 /**
  *  提供segment的items
  *
  *  @return <#return value description#>
  */
 - (NSArray *)itemsForBaseSegmentedControl{
-    return @[@"全部",@"特别关心",@"好友动态",@"认证空间"];
+    return @[@"我的好友",@"好友列表"];
 }
+
 /**
  *  segment点击的处理方法
  */

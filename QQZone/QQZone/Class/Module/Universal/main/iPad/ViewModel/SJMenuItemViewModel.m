@@ -37,7 +37,7 @@
                            @{@"title":@"与我相关",@"icon":@"tab_bar_passive_feed_icon",@"detailContentVCName":@"SJAboultMeTableViewController"},
                            @{@"title":@"照片墙",@"icon":@"tab_bar_pic_wall_icon",@"detailContentVCName":@"SJPictureWallCollectionViewController"},
                            @{@"title":@"电子相框",@"icon":@"tab_bar_e_album_icon",@"detailContentVCName":@"SJAlbumCollectionViewController"},
-                           @{@"title":@"好友",@"icon":@"tab_bar_friend_icon",@"detailContentVCName":@"SJComposeTableViewController"},
+                           @{@"title":@"好友",@"icon":@"tab_bar_friend_icon",@"detailContentVCName":@"SJMyFrendsViewController"},
                            @{@"title":@"更多",@"icon":@"tab_bar_e_more_icon",@"detailContentVCName":@"SJMoreTableViewController"}];
         
         //3.1字典转模型

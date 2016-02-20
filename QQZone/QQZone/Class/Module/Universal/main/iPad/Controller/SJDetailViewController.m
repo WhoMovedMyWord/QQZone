@@ -67,7 +67,7 @@
         make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 0, 44));
     }];
     
-    SJLog(@"%ld---%ld",self.childViewControllers.count,self.view.subviews.count);
+//    SJLog(@"%ld---%ld",self.childViewControllers.count,self.view.subviews.count);
 }
 
 @end

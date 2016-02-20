@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SJHomeTableViewController : UITableViewController
+#import "SJBaseSegmenTableViewController.h"
+@interface SJHomeTableViewController : SJBaseSegmenTableViewController
 
 @end
