@@ -14,6 +14,9 @@
 		DF6A1FDC1C78592B00A1D66F /* SJCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A1FDB1C78592B00A1D66F /* SJCategoryViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		DF6A1FDF1C785E8C00A1D66F /* SJCategoryMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A1FDE1C785E8C00A1D66F /* SJCategoryMainTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DF6A1FE31C78613D00A1D66F /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF6A1FE21C78613D00A1D66F /* categories.plist */; settings = {ASSET_TAGS = (); }; };
+		DF6A1FE61C78982800A1D66F /* SJCategorySubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A1FE51C78982800A1D66F /* SJCategorySubTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		DF6A1FE91C789FB700A1D66F /* SJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A1FE81C789FB700A1D66F /* SJConst.m */; settings = {ASSET_TAGS = (); }; };
+		DF6A1FEB1C78A4BA00A1D66F /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A1FEA1C78A4BA00A1D66F /* Foundation+Log.m */; settings = {ASSET_TAGS = (); }; };
 		DF7C3F471C7596880017B8A8 /* SJAlbumCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F461C7596880017B8A8 /* SJAlbumCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DF7C3F4A1C75969E0017B8A8 /* SJPictureWallCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F491C75969E0017B8A8 /* SJPictureWallCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DF7C3F4D1C7596B50017B8A8 /* SJZoneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C3F4C1C7596B50017B8A8 /* SJZoneTableViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -55,6 +58,11 @@
 		DF6A1FDD1C785E8C00A1D66F /* SJCategoryMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCategoryMainTableViewCell.h; sourceTree = "<group>"; };
 		DF6A1FDE1C785E8C00A1D66F /* SJCategoryMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCategoryMainTableViewCell.m; sourceTree = "<group>"; };
 		DF6A1FE21C78613D00A1D66F /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		DF6A1FE41C78982800A1D66F /* SJCategorySubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCategorySubTableViewCell.h; sourceTree = "<group>"; };
+		DF6A1FE51C78982800A1D66F /* SJCategorySubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCategorySubTableViewCell.m; sourceTree = "<group>"; };
+		DF6A1FE71C789FB700A1D66F /* SJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJConst.h; sourceTree = "<group>"; };
+		DF6A1FE81C789FB700A1D66F /* SJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJConst.m; sourceTree = "<group>"; };
+		DF6A1FEA1C78A4BA00A1D66F /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		DF7C3F451C7596880017B8A8 /* SJAlbumCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAlbumCollectionViewController.h; sourceTree = "<group>"; };
 		DF7C3F461C7596880017B8A8 /* SJAlbumCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAlbumCollectionViewController.m; sourceTree = "<group>"; };
 		DF7C3F481C75969E0017B8A8 /* SJPictureWallCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPictureWallCollectionViewController.h; sourceTree = "<group>"; };
@@ -202,6 +210,8 @@
 				DFA2B7521C7819F8002C07FD /* SJTopView.m */,
 				DF6A1FDD1C785E8C00A1D66F /* SJCategoryMainTableViewCell.h */,
 				DF6A1FDE1C785E8C00A1D66F /* SJCategoryMainTableViewCell.m */,
+				DF6A1FE41C78982800A1D66F /* SJCategorySubTableViewCell.h */,
+				DF6A1FE51C78982800A1D66F /* SJCategorySubTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +287,8 @@
 		DFF8DC3B1C7414AD00DE2E2F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				DF6A1FE71C789FB700A1D66F /* SJConst.h */,
+				DF6A1FE81C789FB700A1D66F /* SJConst.m */,
 				DFF8DC3C1C7414AD00DE2E2F /* AppDelegate.h */,
 				DFF8DC3D1C7414AD00DE2E2F /* AppDelegate.m */,
 				DFF8DC3E1C7414AD00DE2E2F /* Category */,
@@ -291,6 +303,7 @@
 		DFF8DC3E1C7414AD00DE2E2F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DF6A1FEA1C78A4BA00A1D66F /* Foundation+Log.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -679,13 +692,16 @@
 				DF7C3F591C7596E40017B8A8 /* SJMoreTableViewController.m in Sources */,
 				DFC1771C1C76F97200561DAE /* SJDetailViewController.m in Sources */,
 				DF6A1FD81C7857F600A1D66F /* SJCategoryModel.m in Sources */,
+				DF6A1FE91C789FB700A1D66F /* SJConst.m in Sources */,
 				DFF8DC461C7414AD00DE2E2F /* AppDelegate.m in Sources */,
 				DFF8DC511C744D1800DE2E2F /* SJMenuViewController.m in Sources */,
 				DF9BA48A1C76C1F40089D9C6 /* SJMenuButton.m in Sources */,
+				DF6A1FE61C78982800A1D66F /* SJCategorySubTableViewCell.m in Sources */,
 				DF30D76F1C784D7C00C8CEC3 /* SJCategoryViewController.m in Sources */,
 				DFDB4F261C77FD5F000E49EA /* SJBaseSegmenTableViewController.m in Sources */,
 				DF7C3F501C7596C40017B8A8 /* SJAboultMeTableViewController.m in Sources */,
 				DFDB4F341C7809FE000E49EA /* SJBlogViewController.m in Sources */,
+				DF6A1FEB1C78A4BA00A1D66F /* Foundation+Log.m in Sources */,
 				DFA2B7531C7819F8002C07FD /* SJTopView.m in Sources */,
 				DF9BA4861C76B6C00089D9C6 /* SJMenuItemViewModel.m in Sources */,
 				DFDB4F2B1C780375000E49EA /* SJMyFrendsViewController.m in Sources */,

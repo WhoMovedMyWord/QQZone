@@ -33,7 +33,7 @@
 /**
  *  子分类数据
  */
-@property(nonatomic,copy) NSString *subcategories;
+@property(nonatomic,copy) NSArray *subcategories;
 
 
 

@@ -11,7 +11,7 @@
 #import "SJCategoryViewController.h"
 
 @interface SJPictureWallCollectionViewController ()<SJTopViewDelegate>
-@property (nonatomic, strong) SJTopView *categoryTopItem;
+@property (nonatomic, strong) SJTopView *categoryTopView;
 @end
 
 @implementation SJPictureWallCollectionViewController
@@ -35,13 +35,27 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self setupNavRight];
     [self setupNavLeft];
+    
+    //监听SJCategoryViewController中展示数据的改变,来改变topViewUI
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kSJCategoryDidChangeNofitication object:nil] subscribeNext:^(NSNotification *x) {
+//        SJLog(@"%@",x);
+        NSString *title = x.userInfo[@"SJCategoryeNameKey"];
+        NSString *subTitle = x.userInfo[@"SJSubCategoryeNameKey"];
+        NSString *imgName = x.userInfo[@"SJCategoryImageNameKey"];
+        NSString *helImgName = x.userInfo[@"SJCategoryHighlightedImageNameKey"];
+        
+        self.categoryTopView.iconName = imgName;
+        self.categoryTopView.helIconName = helImgName;
+        self.categoryTopView.title = title;
+        self.categoryTopView.subTitle = subTitle;
+    }];
 }
 
 - (void)setupNavLeft{
-    self.categoryTopItem = [[SJTopView alloc] init];
-    self.categoryTopItem.delegate = self;
-    self.categoryTopItem.frame = CGRectMake(0, 0, 100, 30);
-    UIBarButtonItem *categoryButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.categoryTopItem];
+    self.categoryTopView = [[SJTopView alloc] init];
+    self.categoryTopView.delegate = self;
+    self.categoryTopView.frame = CGRectMake(0, 0, 100, 30);
+    UIBarButtonItem *categoryButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.categoryTopView];
     self.navigationItem.leftBarButtonItem = categoryButtonItem;
 }
 
